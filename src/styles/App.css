@@ -1,0 +1,783 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body { font-family: 'Roboto', sans-serif; }
+
+/* O seu CSS antigo continua aqui abaixo... */
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* Fundo geral da página */
+}
+
+/* A classe .mobile-frame foi removida */
+
+.screen-container {
+  max-width: 800px; /* Limita a largura para melhor leitura em telas grandes */
+  min-height: 100vh; /* Garante que a tela ocupe a altura toda */
+  margin: 0 auto; /* Centraliza o container de conteúdo */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+.screen-container.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-placeholder {
+  width: 200px;
+  height: 150px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #aaa;
+  border: 2px dashed #ccc;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn.primary {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  line-height: 1.6;
+  color: #555;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 12px 10px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.dashboard-header span {
+  font-size: 1.5rem;
+}
+
+.dashboard main {
+  padding: 0 2rem;
+  flex: 1;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 20px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.25rem 0;
+}
+
+.card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card.newsletter { background-color: #ef4444; }
+.card.feed { background-color: #0d9488; }
+.card.desafios { background-color: #f97316; }
+.card.comunidade { background-color: #f59e0b; }
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  /* Estilos ajustados para um rodapé fixo ou de página inteira */
+  border-top: 1px solid #eee;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  margin: 1.5rem -2rem -2rem -2rem; /* Faz o rodapé ocupar a largura do container */
+}
+
+.bottom-nav span {
+  font-size: 1.5rem;
+}
+
+.nav-logo-placeholder {
+  width: 40px;
+  height: 40px;
+  background-color: #ef4444;
+  border-radius: 8px;
+}
+
+/* --- NOVOS ESTILOS PARA O PERFIL --- */
+
+.hamburger-menu {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.profile-page {
+  background-color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.profile-header {
+  text-align: right;
+}
+
+.back-arrow {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.profile-info {
+  margin-top: 1rem;
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  background-image: url('https://i.imgur.com/J2aA412.png'); /* Imagem de placeholder */
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.profile-info .email {
+  color: #777;
+  margin: 0.25rem 0;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid #555;
+  border-radius: 15px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.profile-info .stats {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.profile-menu {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu-item {
+  border: none;
+  border-radius: 15px;
+  padding: 1rem;
+  color: white;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.menu-item span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: normal;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.menu-item.favoritos { background-color: #ef4444; }
+.menu-item.desafios { background-color: #f97316; }
+.menu-item.feedbacks { background-color: #f59e0b; }
+
+.linkedin-connect {
+  margin: 2rem 0;
+}
+
+.linkedin-connect p {
+  margin: 0 0 0.5rem 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.linkedin-btn {
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.profile-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.profile-footer button {
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+/* --- NOVOS ESTILOS PARA NEWSLETTER --- */
+
+.card-link {
+  text-decoration: none;
+}
+
+/* --- TELA LISTA DE NOTÍCIAS --- */
+.newsletter-list-page {
+  padding: 0;
+  background-color: #fff;
+}
+
+.newsletter-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter-header .title-container {
+  flex-grow: 1;
+  text-align: center;
+  background-color: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.news-card {
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.date-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.news-card .card-content {
+  padding: 1rem;
+  position: relative;
+}
+
+.card-content p {
+  margin: 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.card-content h3 {
+  margin: 0.25rem 0;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.bookmark-icon-small {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 1.5rem;
+  color: #ef4444;
+}
+
+/* --- TELA ARTIGO --- */
+.article-page {
+  padding: 0;
+}
+
+.article-header {
+  padding: 1rem 1.5rem;
+}
+
+.article-image-container {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  width: calc(100% - 3rem);
+}
+
+.article-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 1.5rem;
+}
+
+.article-content .category {
+  color: #555;
+  font-weight: bold;
+  margin: 0;
+}
+
+.article-content h2 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin: 0.5rem 0;
+}
+
+.article-content .author-date {
+  color: #777;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.article-content .text-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* --- NOVOS ESTILOS PARA O FEED --- */
+
+.feed-page {
+  background-color: #f0f2f5;
+}
+
+.feed-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+
+.feed-header .back-button.feed-back,
+.feed-header .add-button {
+  background-color: #0d9488;
+  min-width: 40px;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.feed-header .title-container.feed-title {
+  background-color: #0d9488;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.date-filter-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.date-filter-button {
+  border: 1px solid #0d9488;
+  background-color: #fff;
+  color: #0d9488;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.date-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0d9488;
+  color: white;
+  list-style: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 15px;
+  width: 120px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.date-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #0d9488 transparent;
+}
+
+.date-dropdown li {
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.date-dropdown li:hover {
+  background-color: #0f766e;
+}
+
+.post-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.user-avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.user-avatar-placeholder::before {
+  content: '👤'; /* Placeholder icon */
+}
+
+.user-info {
+  flex-grow: 1;
+}
+
+.user-info strong {
+  display: block;
+}
+
+.user-info span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.like-icon {
+  font-size: 1.5rem;
+  color: #ef4444;
+  cursor: pointer;
+}
+
+.post-text {
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* --- NOVOS ESTILOS PARA DESAFIOS --- */
+
+.challenges-page {
+  background-color: #f0f2f5;
+}
+
+.challenges-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+}
+
+.challenges-header .back-button.challenges-back {
+  background-color: #f97316;
+}
+
+.challenges-header .title-container.challenges-title {
+  background-color: #f97316;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.challenge-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem 1.5rem;
+  gap: 1rem;
+}
+
+.challenge-filter-container p {
+  margin: 0;
+  flex: 1;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.challenge-date-button {
+  border: 1px solid #f97316;
+  background-color: #fff;
+  color: #f97316;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.challenge-date-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f97316;
+  color: white;
+  list-style: none;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 15px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.challenge-date-dropdown li {
+  background-color: #fff;
+  color: #333;
+  padding: 0.75rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.challenge-date-dropdown li:last-child {
+  margin-bottom: 0;
+}
+
+.challenge-date-dropdown li.active {
+  background-color: #ef4444;
+  color: white;
+}
+
+.challenge-date-dropdown li span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #777;
+}
+
+.challenge-date-dropdown li.active span {
+  color: rgba(255,255,255,0.8);
+}
+
+.challenge-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.challenge-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.challenge-type {
+  border: 1px solid #aaa;
+  color: #555;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.group-icon {
+  color: #ef4444;
+  font-size: 1.5rem;
+}
+
+.challenge-card h2 {
+  margin: 0 0 1rem 0;
+}
+
+.challenge-card p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.object-section {
+  margin: 1.5rem 0;
+}
+
+.object-section p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.object-section strong {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.respond-button {
+  display: block;
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+  padding: 1rem;
+  border: none;
+  background-color: #ef4444;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
