@@ -1,32 +1,33 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  CubeTransparentIcon,
   CalendarDaysIcon,
   HandRaisedIcon,
   UsersIcon,
 } from '@heroicons/react/24/solid';
+import logoHome from '../imgs/logoSemTexto.jpg';
 
 const slides = [
   {
     id: 0,
     title: ['Bem vindo(a)', 'ao Fractal!'],
-    icon: CubeTransparentIcon,
-    iconWrapper: 'bg-gradient-to-tr from-brand-teal via-brand-orange to-brand-red',
+    // use logo image for the first slide
+    image: logoHome,
+    iconWrapper: 'bg-brand-white',
     text: 'Chega de fórmulas prontas. Nosso app, movido por uma IA provocadora, existe para romper com o método linear de ensino e transformar você em um designer com profunda capacidade analítica e de inovação.',
   },
   {
     id: 1,
     title: ['Alimentação diária', 'de repertório:'],
     icon: CalendarDaysIcon,
-    iconWrapper: 'bg-brand-red',
+    iconWrapper: 'bg-brand-orange',
     text: 'Receba doses diárias de conhecimento em História, Filosofia, Arte e Ciência, estimulando conexões criativas inesperadas.',
   },
   {
     id: 2,
     title: ['Dinâmicas e', 'Desafios (IA)'],
     icon: HandRaisedIcon,
-    iconWrapper: 'bg-brand-teal',
+    iconWrapper: 'bg-brand-feed',
     text: 'Nossa IA gera problemas não-lineares, como a “Dinâmica do Objeto Esquecido”, forçando você a aplicar o repertório adquirido e justificar escolhas criativas.',
   },
   {
@@ -76,6 +77,7 @@ const Welcome = () => {
       >
         {slides.map((s) => {
           const Icon = s.icon;
+          const Img = s.image;
           return (
             <section
               key={s.id}
@@ -84,8 +86,13 @@ const Welcome = () => {
               <div className="max-w-sm text-center">
                 <div
                   className={`mx-auto mb-8 rounded-xl flex items-center justify-center ${s.iconWrapper} h-40 w-40`}
+                  style={{ color: 'white' }}
                 >
-                  <Icon className="h-24 w-24 text-white drop-shadow" />
+                  {Img ? (
+                    <img src={Img} alt={s.title.join(' ')} className="h-24 w-24 object-contain" />
+                  ) : (
+                    <Icon className="h-24 w-24 text-white drop-shadow" />
+                  )}
                 </div>
                 <h1 className="text-3xl font-semibold leading-tight mb-6">
                   {s.title.map((line, i) => (

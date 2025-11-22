@@ -5,7 +5,8 @@ const Login = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/newsletter');
+    // após login devemos enviar o usuário para a tela de boas-vindas
+    navigate('/welcome');
   };
 
   return (

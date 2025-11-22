@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 import NavBar from '../components/NavBar';
 import LikeButton from '../components/LikeButton';
 import SaveButton from '../components/SaveButton';
@@ -28,10 +30,19 @@ const Feed = () => {
   return (
     <div className="bg-white min-h-screen pb-32 px-4 pt-8 space-y-6">
 
-      <div className="flex-grow bg-brand-feed text-white rounded-full py-2 px-6 flex justify-between items-center text-xl font-bold">
+      {/* Header com botão de voltar explícito para /newsletter */}
+      <header className="p-4 flex items-center gap-4">
+        <Link
+          to="/newsletter"
+          className="h-11 w-11 flex-shrink-0 bg-brand-feed text-white rounded-full flex items-center justify-center"
+        >
+          <ChevronLeftIcon className="h-7 w-7" />
+        </Link>
+        <div className="flex-grow bg-brand-feed text-white rounded-full py-2 px-6 flex justify-between items-center text-xl font-bold">
           <span>Feed</span>
           <BookmarkIcon className="h-6 w-6" />
         </div>
+      </header>
      
 
       {feedData.map(post => {
