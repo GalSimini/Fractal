@@ -97,7 +97,7 @@ const Welcome = () => {
                 <p className="text-sm text-gray-700 leading-relaxed">{s.text}</p>
                 {s.final && (
                   <button
-                    onClick={() => navigate('/dashboard')}
+                    onClick={() => navigate('/newsletter')}
                     className="mt-12 w-full bg-brand-red text-white font-semibold text-lg py-3 rounded-full shadow-md active:scale-[.98] transition"
                   >
                     Iniciar minha aventura!
