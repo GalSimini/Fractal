@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Fractal/static/css/main.42fdd9a4.css",
+    "main.js": "/Fractal/static/js/main.79560fcd.js",
+    "static/media/predio.jpg": "/Fractal/static/media/predio.f56b958025871166ccf6.jpg",
+    "static/media/logo.png": "/Fractal/static/media/logo.58080573cc9265bd7457.png",
+    "static/media/cadeirasNaGrama.jpg": "/Fractal/static/media/cadeirasNaGrama.e813da2e8df2c58bb39e.jpg",
+    "static/media/marisa2.jpg": "/Fractal/static/media/marisa2.2e14e87948f53f345d02.jpg",
+    "static/media/marisa1.jpg": "/Fractal/static/media/marisa1.bc9897304a920f93078e.jpg",
+    "static/media/flavio2.jpg": "/Fractal/static/media/flavio2.76f9bebde34ba534d45c.jpg",
+    "static/media/flavio1.jpg": "/Fractal/static/media/flavio1.a088bf6a8d1442d343d6.jpg",
+    "static/media/makeRareBeauty.jpg": "/Fractal/static/media/makeRareBeauty.c6579a56a1aa4756236a.jpg",
+    "static/media/logoSemTexto.jpg": "/Fractal/static/media/logoSemTexto.e5abd116628be795e414.jpg",
+    "static/media/face-happy.png": "/Fractal/static/media/face-happy.2b26e211c11c18df48bc.png",
+    "static/media/face-neutral.png": "/Fractal/static/media/face-neutral.3ba697469e7a3ee05b21.png",
+    "index.html": "/Fractal/index.html",
+    "main.42fdd9a4.css.map": "/Fractal/static/css/main.42fdd9a4.css.map",
+    "main.79560fcd.js.map": "/Fractal/static/js/main.79560fcd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42fdd9a4.css",
+    "static/js/main.79560fcd.js"
+  ]
+}
