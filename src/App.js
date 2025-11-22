@@ -20,7 +20,7 @@ const App = () => {
     <MenuProvider>
       <FavoritesProvider>
         <Routes>
-          <Route path="/" element={<Navigate to="/newsletter" replace />} />
+          <Route path="/" element={<Navigate to="/landing" replace />} />
           <Route path="/landing" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/welcome" element={<Welcome />} />
@@ -32,7 +32,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/menu" element={<Dashboard />} />
-          <Route path="*" element={<Navigate to="/newsletter" replace />} />
+          <Route path="*" element={<Navigate to="/landing" replace />} />
         </Routes>
         <Dashboard drawer />
       </FavoritesProvider>
