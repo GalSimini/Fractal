@@ -8,6 +8,7 @@ import {
   ChatBubbleBottomCenterTextIcon,
 } from '@heroicons/react/24/solid';
 import NavBar from '../components/NavBar';
+import logoHome from '../imgs/logoSemTexto.jpg';
 import { useMenu } from '../components/MenuContext';
 import { useFavorites } from '../components/FavoritesContext';
 
@@ -126,14 +127,14 @@ const Dashboard = ({ drawer }) => {
       </div>
 
       <div className="relative mt-2">
-        <div className="h-32 w-32 rounded-full bg-gray-200 overflow-hidden flex items-center justify-center">
-          <img
-            src="/imgs/av1.png"
-            alt="avatar"
-            onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/128'; }}
-            className="h-full w-full object-cover"
-          />
-        </div>
+          <div className="h-32 w-32 rounded-full bg-gray-200 overflow-hidden flex items-center justify-center">
+            <img
+              src={logoHome}
+              alt="avatar"
+              onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/128'; }}
+              className="h-full w-full object-cover"
+            />
+          </div>
         <button
           className="absolute -top-1 -right-1 h-10 w-10 rounded-full bg-brand-red flex items-center justify-center shadow-md"
           aria-label="Notificações"
