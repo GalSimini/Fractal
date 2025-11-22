@@ -63,7 +63,7 @@ const Community = () => {
       {/* Header */}
       <header className="p-4 flex items-center gap-4">
         <Link
-          to="/dashboard"
+          to="/newsletter"
           className="h-11 w-11 flex-shrink-0 bg-brand-yellow text-white rounded-full flex items-center justify-center"
         >
           <ChevronLeftIcon className="h-7 w-7" />
