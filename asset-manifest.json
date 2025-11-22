@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Fractal/static/css/main.42fdd9a4.css",
-    "main.js": "/Fractal/static/js/main.79560fcd.js",
+    "main.js": "/Fractal/static/js/main.2f2e3e2c.js",
     "static/media/predio.jpg": "/Fractal/static/media/predio.f56b958025871166ccf6.jpg",
     "static/media/logo.png": "/Fractal/static/media/logo.58080573cc9265bd7457.png",
     "static/media/cadeirasNaGrama.jpg": "/Fractal/static/media/cadeirasNaGrama.e813da2e8df2c58bb39e.jpg",
@@ -15,10 +15,10 @@
     "static/media/face-neutral.png": "/Fractal/static/media/face-neutral.3ba697469e7a3ee05b21.png",
     "index.html": "/Fractal/index.html",
     "main.42fdd9a4.css.map": "/Fractal/static/css/main.42fdd9a4.css.map",
-    "main.79560fcd.js.map": "/Fractal/static/js/main.79560fcd.js.map"
+    "main.2f2e3e2c.js.map": "/Fractal/static/js/main.2f2e3e2c.js.map"
   },
   "entrypoints": [
     "static/css/main.42fdd9a4.css",
-    "static/js/main.79560fcd.js"
+    "static/js/main.2f2e3e2c.js"
   ]
 }
