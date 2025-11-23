@@ -50,8 +50,8 @@ const Feed = () => {
       </header>
       {/* Date pill (current date) */}
       <div className="flex justify-center -mt-2 mb-4">
-        <div className="inline-flex items-center gap-3 bg-white border border-gray-200 px-3 py-1 rounded-full shadow-sm">
-          <span className="text-xs text-gray-600">{formattedDate}</span>
+        <div className="inline-flex items-center gap-3 bg-white border border-brand-feed px-3 py-1 rounded-full shadow-sm">
+          <span className="text-xs text-brand-feed">{formattedDate}</span>
           <span className="h-2 w-2 bg-brand-red rounded-full inline-block" />
         </div>
       </div>
