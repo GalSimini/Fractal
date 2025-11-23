@@ -27,6 +27,11 @@ const Feed = () => {
   const [feedData] = useState(initialPosts);
   const { toggleFavorite, isFavorited } = useFavorites();
 
+  const today = new Date();
+  const formattedDate = `${String(today.getDate()).padStart(2, '0')}/${String(
+    today.getMonth() + 1
+  ).padStart(2, '0')}/${String(today.getFullYear()).slice(-2)}`;
+
   return (
     <div className="bg-white min-h-screen pb-32 px-4 pt-8 space-y-6">
 
@@ -43,6 +48,13 @@ const Feed = () => {
           <BookmarkIcon className="h-6 w-6" />
         </div>
       </header>
+      {/* Date pill (current date) */}
+      <div className="flex justify-center -mt-2 mb-4">
+        <div className="inline-flex items-center gap-3 bg-white border border-gray-200 px-3 py-1 rounded-full shadow-sm">
+          <span className="text-xs text-gray-600">{formattedDate}</span>
+          <span className="h-2 w-2 bg-brand-red rounded-full inline-block" />
+        </div>
+      </div>
      
 
       {feedData.map(post => {
