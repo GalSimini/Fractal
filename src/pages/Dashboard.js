@@ -6,6 +6,7 @@ import {
   HandRaisedIcon,
   BookmarkIcon,
   ChatBubbleBottomCenterTextIcon,
+  XMarkIcon,
 } from '@heroicons/react/24/solid';
 import NavBar from '../components/NavBar';
 import logoHome from '../imgs/logoSemTexto.jpg';
@@ -49,9 +50,10 @@ const Dashboard = ({ drawer }) => {
           <div className="flex justify-end">
             <button
               onClick={closeMenu}
+              aria-label="Fechar menu"
               className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center"
             >
-              <Cog6ToothIcon className="h-6 w-6 text-gray-600" />
+              <XMarkIcon className="h-6 w-6 text-gray-600" />
             </button>
           </div>
 
